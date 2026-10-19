@@ -1,0 +1,239 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1e3932;
+}
+
+/* Navigation bar */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 5px #dddddd;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #00754a;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1e3932;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00754a;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 9px 18px;
+    border-radius: 25px;
+    border: 1px solid #1e3932;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.join-button {
+    background-color: #1e3932;
+    color: white;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d4e9e2;
+    min-height: 400px;
+    padding: 40px 8%;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #00754a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Menu section */
+.menu-section {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.menu-section h2,
+.gift-cards h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.menu-card {
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 8px #e0e0e0;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu-card h3 {
+    color: #00754a;
+}
+
+.menu-card p {
+    line-height: 1.5;
+}
+
+.menu-card button {
+    margin-top: 10px;
+}
+
+/* Rewards section */
+.rewards {
+    background-color: #1e3932;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.rewards h2 {
+    font-size: 30px;
+}
+
+.rewards p {
+    line-height: 1.7;
+}
+
+.rewards button {
+    background-color: white;
+    color: #1e3932;
+    margin-top: 10px;
+}
+
+/* Gift cards section */
+.gift-cards {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gift-cards p {
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #f7f7f7;
+    font-size: 14px;
+}
+
+/* Responsive layout for phones and tablets */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .header-buttons {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
