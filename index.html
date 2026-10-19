@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Starbucks Coffee</title>
+
+    <style>
+        /* General styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #1e3932;
+        }
+
+        /* Navigation bar */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 5%;
+            background-color: white;
+            box-shadow: 0 2px 5px #dddddd;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: #00754a;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1e3932;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00754a;
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 9px 18px;
+            border-radius: 25px;
+            border: 1px solid #1e3932;
+            background-color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .join-button {
+            background-color: #1e3932;
+            color: white;
+        }
+
+        /* Promotional section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d4e9e2;
+            min-height: 400px;
+            padding: 40px 8%;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 46px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 12px;
+        }
+
+        .hero-button {
+            background-color: #00754a;
+            color: white;
+            border: none;
+            margin-top: 15px;
+        }
+
+        /* Menu section */
+        .menu-section {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .menu-section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .menu-card {
+            width: 280px;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #f7f7f7;
+            box-shadow: 0 2px 8px #e0e0e0;
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .menu-card h3 {
+            color: #00754a;
+        }
+
+        .menu-card p {
+            line-height: 1.5;
+        }
+
+        /* Rewards section */
+        .rewards {
+            background-color: #1e3932;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .rewards h2 {
+            font-size: 30px;
+        }
+
+        .rewards p {
+            line-height: 1.7;
+        }
+
+        .rewards button {
+            background-color: white;
+            color: #1e3932;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #f7f7f7;
+            font-size: 14px;
+        }
+
+        /* Mobile layout */
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 34px;
+            }
+
+            .menu-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header>
+        <div class="logo">STARBUCKS</div>
+
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#rewards">Rewards</a>
+            <a href="#gift-cards">Gift Cards</a>
+        </nav>
+
+        <div class="header-buttons">
+            <button onclick="alert('Find a store near you!')">
+                Find a Store
+            </button>
+
+            <button onclick="alert('Sign in feature coming soon!')">
+                Sign in
+            </button>
+
+            <button class="join-button"
+                onclick="alert('Welcome to Starbucks Rewards!')">
+                Join now
+            </button>
+        </div>
+    </header>
+
+    <!-- Main promotional section -->
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>It's a great day for coffee.</h1>
+
+                <p>
+                    Discover your favorite coffee, enjoy delicious treats,
+                    and make every moment a little more special.
+                </p>
+
+                <button class="hero-button"
+                    onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+                    Explore our menu
+                </button>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80"
+                    alt="A freshly prepared iced coffee">
+            </div>
+        </section>
+
+        <!-- Menu section -->
+        <section class="menu-section" id="menu">
+            <h2>Our Favorites</h2>
+
+            <p>Take a look at some of our favorite treats.</p>
+
+            <div class="menu-container">
+
+                <div class="menu-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"
+                        alt="Iced coffee">
+
+                    <h3>Iced Coffee</h3>
+
+                    <p>
+                        Refresh yourself with a smooth and delicious
+                        iced coffee.
+                    </p>
+
+                    <button onclick="alert('Iced Coffee selected!')">
+                        Learn more
+                    </button>
+                </div>
+
+                <div class="menu-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+                        alt="A cup of freshly brewed coffee">
+
+                    <h3>Freshly Brewed Coffee</h3>
+
+                    <p>
+                        Enjoy the rich aroma and comforting taste
+                        of freshly brewed coffee.
+                    </p>
+
+                    <button onclick="alert('Brewed Coffee selected!')">
+                        Learn more
+                    </button>
+                </div>
+
+                <div class="menu-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+                        alt="Freshly baked pastries">
+
+                    <h3>Bakery Treats</h3>
+
+                    <p>
+                        Pair your favorite drink with a delicious
+                        bakery treat.
+                    </p>
+
+                    <button onclick="alert('Bakery Treats selected!')">
+                        Learn more
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Rewards section -->
+        <section class="rewards" id="rewards">
+            <h2>Make Every Sip Count</h2>
+
+            <p>
+                Discover the joy of Starbucks Rewards and make
+                your coffee moments even more special.
+            </p>
+
+            <button onclick="alert('Rewards information coming soon!')">
+                Join Starbucks Rewards
+            </button>
+        </section>
+
+        <!-- Gift cards section -->
+        <section class="menu-section" id="gift-cards">
+            <h2>Share the Coffee Love</h2>
+
+            <p>
+                Make someone's day with a thoughtful coffee gift.
+            </p>
+
+            <button onclick="alert('Gift card information coming soon!')">
+                Explore Gift Cards
+            </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Starbucks Website Clone</p>
+        <p>Created for learning HTML and CSS.</p>
+    </footer>
+
+</body>
+</html>
